@@ -1,10 +1,9 @@
-const crypto = require("crypto");
+// const express = require('express');
+// const app = express();
 
-const generateUUIDNow = () => {
-    const uuid4 = crypto.randomUUID()
-    const d = new Date();
-    console.log(d.toISOString() + ' ' + uuid4);
-    setTimeout(generateUUIDNow, 5000)
-}
+const app = require('./app');
+const PORT = process.env.PORT || 8080;
 
-generateUUIDNow();
+app.listen(PORT, () => {
+    console.log("Server started in port " + PORT);
+});
