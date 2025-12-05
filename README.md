@@ -1,7 +1,9 @@
 
  # KubernetesSubmissions
  
-Chapter 2
+## Exercises 
+
+### Chapter 2
 
  - [1.1][]
  - 
