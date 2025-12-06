@@ -1,1 +1,1 @@
-Deploy with 'kubectl apply -f manifest'
+Deploy with 'kubectl apply -f manifests'

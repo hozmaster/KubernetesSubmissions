@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hashgenerator-dep
+  labels:
+    app: hashgenerator-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hashgenerator-dep
+  template:
+    metadata:
+      name: hashgenerator-dep
+      labels:
+        app: hashgenerator-dep
+    spec:
+      containers:
+        - name: hashgenerator-dep
+          image: jakousa/dwk-app1:b7fc18de2376da80ff0cfc72cf581a9f94d10e64
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
