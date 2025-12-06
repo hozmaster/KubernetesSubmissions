@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hashgenerator-dep
+  name: cutlass-deployment
   labels:
-    app: hashgenerator-dep
+    app: cutlass-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hashgenerator-dep
+      app: cutlass-app
   template:
     metadata:
-      name: hashgenerator-dep
+      name: cutlass-app
       labels:
-        app: hashgenerator-dep
+        app: cutlass-app
     spec:
       containers:
-        - name: hashgenerator-dep
-          image: jakousa/dwk-app1:b7fc18de2376da80ff0cfc72cf581a9f94d10e64
+        - name: cutlass-app
+          image: matsubokkuri/cutlass-app:1.2
           imagePullPolicy: IfNotPresent
       restartPolicy: Always
+      
