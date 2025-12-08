@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "run": "node index.js",
+    "build": "",
     "dev": "node --run start -- --watch"
   },
   "dependencies": {
