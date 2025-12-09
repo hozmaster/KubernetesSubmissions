@@ -20,3 +20,4 @@ spec:
           image: matsubokkuri/cutlass-app:1.5
           imagePullPolicy: IfNotPresent
       restartPolicy: Always
+      
