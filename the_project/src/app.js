@@ -12,5 +12,10 @@ app.get('/', (req, res) => {
     res.send(`${appIdentifier}: ${uuidHash}`);
 });
 
+app.get ('/hashtime', (req, res) => {
+    const d = new Date();
+    const hashCode = d.toISOString() + ' ' + generateShortHash();
+    res.send (hashCode);
+})
 
 module.exports = app;
