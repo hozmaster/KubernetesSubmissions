@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: cutlass-app-svc
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: cutlass-app
   ports:
