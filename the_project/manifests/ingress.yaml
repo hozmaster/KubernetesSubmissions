@@ -20,3 +20,10 @@ spec:
                 name: cutlass-app-svc
                 port:
                   number: 2345
+          - path: /pingpong
+            pathType: Prefix
+            backend:
+              service:
+                name: woodboard-app-svc
+                port:
+                  number: 2346

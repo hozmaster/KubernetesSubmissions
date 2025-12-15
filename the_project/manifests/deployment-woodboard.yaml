@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: woodboard-deployment
+  labels:
+    app: woodboard-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: woodboard-app
+  template:
+    metadata:
+      name: woodboard-app
+      labels:
+        app: woodboard-app
+    spec:
+      containers:
+        - name: woodboard-app
+          image: matsubokkuri/woodboard-app:1.9
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      
