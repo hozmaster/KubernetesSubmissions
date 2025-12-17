@@ -1,0 +1,13 @@
+{
+  "name": "cutlass-reader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "run": "node index.js",
+    "dev": "node --run start -- --watch"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cutlass-storage-dep
+  labels:
+    app: cutlass-storage-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cutlass-storage-dep
+  template:
+    metadata:
+      name: cutlass-storage-dep
+      labels:
+        app: cutlass-storage-dep
+    spec:
+      volumes:
+        - name: shared-storage
+          emptyDir: {}
+      containers:
+        - name: cutlass-feeder
+          image: matsubokkuri/cutlass-feeder:1.10
+          imagePullPolicy: IfNotPresent
+          volumeMounts: # Mount volume
+            - name: shared-storage
+              mountPath: /usr/src/app/files
+        - name: cutlass-reader
+          image: matsubokkuri/cutlass-reader:1.10
+          imagePullPolicy: IfNotPresent
+          volumeMounts: # Mount volume
+            - name: shared-storage
+              mountPath: /usr/src/app/files
+      restartPolicy: Always
+      

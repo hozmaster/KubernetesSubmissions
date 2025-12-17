@@ -14,9 +14,11 @@
  - [1.7](https://github.com/hozmaster/KubernetesSubmissions/tree/1.7/the_project)
  - [1.8](https://github.com/hozmaster/KubernetesSubmissions/tree/1.8/the_project)
  - [1.9](https://github.com/hozmaster/KubernetesSubmissions/tree/1.9/the_project)
+ - [1.10](https://github.com/hozmaster/KubernetesSubmissions/tree/1.10/app3)
 
 ~~~
  Folders :
+ - \app3               - Exercise 1.10  
  - \the_project        - The 'log output'-application with Kubernetes files.
                          Check .\the_project\README.md for instructions.
  - \woodboard          - The Ping-Pong application`
