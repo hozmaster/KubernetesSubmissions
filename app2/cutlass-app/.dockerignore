@@ -4,4 +4,4 @@ Dockerfile
 .git
 .gitignore
 .editorconfig
-manifests/
+../manifests/
