@@ -1,0 +1,16 @@
+{
+  "name": "cutlass-app",
+  "version": "1.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "run": "node index.js",
+    "start": "node index.js",
+    "dev": "node --run start -- --watch"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {}
+}
