@@ -6,11 +6,13 @@
   "scripts": {
     "run": "node index.js",
     "start": "node index.js",
-    "dev": "node --run start -- --watch"
+    "dev": "nodemon --watch src index.js"
   },
   "dependencies": {
     "express": "^5.2.1",
     "pug": "^3.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
 }

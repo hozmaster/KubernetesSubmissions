@@ -1,17 +1,22 @@
 const express = require('express');
 const fs = require('node:fs');
 const axios = require('axios');
+
 const app = express();
-const path = require('path');
+
 
 const appPath = '/usr/src/app';
 const theImageFile = appPath + '/files/image.jpg';
 const infoFile = appPath + '/files/ch2112.json';
+const todoListFile = appPath + '/files/todo.json';
+
 const tenMinutesInMs = 10 * 60 * 1000;
 
 let feeder_info = {
     update: false
 }
+
+let todo_list = [];
 
 const writeDataToFileSystem = async (data) => new Promise(res => {
     fs.writeFileSync(targetFolder + the_file, data, err => {
@@ -66,6 +71,10 @@ initSystem = async () => {
         if (!fs.existsSync(infoFile)) {
             fs.writeFileSync(infoFile, JSON.stringify(feeder_info));
         }
+        if (!fs.existsSync(todoListFile)) {
+            fs.writeFileSync(todoListFile, JSON.stringify(todo_list));
+        }
+
     } catch (error) {
         console.log(error);
     }

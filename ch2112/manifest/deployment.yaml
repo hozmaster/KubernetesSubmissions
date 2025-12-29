@@ -21,13 +21,13 @@ spec:
             claimName: cutlass-pv-claim
       containers:
         - name: cutlass-app
-          image: matsubokkuri/cutlass-app:1.12
+          image: matsubokkuri/cutlass-app:1.13
           imagePullPolicy: Always
           volumeMounts: # Mount volume
             - name: shared-storage
               mountPath: /usr/src/app/files
         - name: cutlass-feeder
-          image: matsubokkuri/cutlass-feeder:1.12
+          image: matsubokkuri/cutlass-feeder:1.13
           imagePullPolicy: Always
           volumeMounts: # Mount volume
             - name: shared-storage

@@ -5,3 +5,8 @@
 4. Verify: 
    - 'curl -X GET http://localhost:8081/hashtime' or open it to browser 
    - 'curl -X GET http://localhost:8081/pingpong' or open it to browser
+
+
+curl -X POST -H 'Content-type: application/json' --data '{"todo":"Foo todo 1"}'  http://localhost:3000/api/todo
+
+

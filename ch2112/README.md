@@ -1,4 +1,4 @@
-# app3 - Exercise 1.10
+# ch2112 - Exercise 1.13
 
 ## Folders
 
@@ -15,3 +15,6 @@
 ## Verify:
 
  * Open the browser into http://localhost:8081 
+
+ * Get all todo's : 'curl -X GET http://localhost:8080/api/todo'
+ * Add new todo to the system :  'curl -X POST -H 'Content-type: application/json' -d '{"todo":"Learn JavaScript"}' http://localhost:80801/api/todo'
