@@ -21,7 +21,7 @@
 
 ~~~
  Folders :
- - \ch2112             - Excersie 1.12 & excersie 1.13 
+ - \ch2112             - Exercise 1.12 & exercise 1.13 
  - \app2               - Exercise 1.11 
  - \app3               - Exercise 1.10  
  - \the_project        - The 'log output'-application with Kubernetes files.
