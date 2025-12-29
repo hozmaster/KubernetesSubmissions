@@ -17,10 +17,11 @@
  - [1.10](https://github.com/hozmaster/KubernetesSubmissions/tree/1.10/app3)
  - [1.11](https://github.com/hozmaster/KubernetesSubmissions/tree/1.11/app2)
  - [1.12](https://github.com/hozmaster/KubernetesSubmissions/tree/1.12/ch2112)
+ - [1.13](https://github.com/hozmaster/KubernetesSubmissions/tree/1.13/ch2112)
 
 ~~~
  Folders :
- - \ch2112             - Excersie 1.12 
+ - \ch2112             - Excersie 1.12 & excersie 1.13 
  - \app2               - Exercise 1.11 
  - \app3               - Exercise 1.10  
  - \the_project        - The 'log output'-application with Kubernetes files.
