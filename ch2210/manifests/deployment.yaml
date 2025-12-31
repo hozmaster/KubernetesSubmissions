@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scimitar-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scimitar-app
+  template:
+    metadata:
+      labels:
+        app: scimitar-app
+    spec:
+      containers:
+        - name: scimitar-app
+          image: matsubokkuri/scimitar-app:2.1
+          imagePullPolicy: Always
+        - name: scimitar-backend
+          image: matsubokkuri/scimitar-backend:2.1
+          imagePullPolicy: Always
+      restartPolicy: Always
+      
