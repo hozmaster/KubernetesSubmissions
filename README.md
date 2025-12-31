@@ -21,11 +21,11 @@
 
 ### Chapter 3
 
- - [2.1](https://github.com/hozmaster/KubernetesSubmissions/tree/2.1/ch2212)
+ - [2.1](https://github.com/hozmaster/KubernetesSubmissions/tree/2.1/ch2210)
 
 ~~~
  Folders :
- - \ch2212             - Exercise 2.1 
+ - \ch2210             - Exercise 2.1 
  - \ch2112             - Exercise 1.12 & exercise 1.13 
  - \app2               - Exercise 1.11 
  - \app3               - Exercise 1.10  

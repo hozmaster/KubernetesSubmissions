@@ -1,9 +1,9 @@
 # Exercise 2.1 Connection pods
 
 ## Folders
- 
+
 - scimitar-app      The log-output app.
-- scimitar-backend  The ping-pong backend.   
+- scimitar-backend  The ping-pong backend.
 
 ## Setup
 
