@@ -19,13 +19,17 @@
  - [1.12](https://github.com/hozmaster/KubernetesSubmissions/tree/1.12/ch2112)
  - [1.13](https://github.com/hozmaster/KubernetesSubmissions/tree/1.13/ch2112)
 
+### Chapter 3
+
+ - [2.1](https://github.com/hozmaster/KubernetesSubmissions/tree/2.1/ch2212)
+
 ~~~
  Folders :
+ - \ch2212             - Exercise 2.1 
  - \ch2112             - Exercise 1.12 & exercise 1.13 
  - \app2               - Exercise 1.11 
  - \app3               - Exercise 1.10  
  - \the_project        - The 'log output'-application with Kubernetes files.
                          Check .\the_project\README.md for instructions.
- - \woodboard          - The Ping-Pong application`
 ~~~
 

@@ -26,7 +26,7 @@ spec:
           volumeMounts: # Mount volume
             - name: shared-storage
               mountPath: /usr/src/app/files
-        - name: woodboard-app
+        - name: cutlass-pong-app
           image: matsubokkuri/woodboard-app:1.11
           imagePullPolicy: Always
           volumeMounts: # Mount volume
