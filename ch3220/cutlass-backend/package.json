@@ -1,6 +1,6 @@
 {
-  "name": "scimitar-backend",
-  "version": "1.9.0",
+  "name": "cutlass-backend",
+  "version": "2.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
