@@ -15,13 +15,17 @@
 
 ` $ k3d cluster create --port 8082:30080@agent:0 -p 8081:80@loadbalancer --agents 2 `
 
-3. Create application to the K8s system:
+3. Create a namespace : 
 
-` $ kubectl apply -f manifest/ `
+` $ kubectl create ns exercises `
+
+4. Create application to the K8s system:
+
+` $ kubectl apply -f manifests/ `
 
 4. Wait for while so everything downloaded and system is finalized. Verify that everything is ok.
 
-` $ kubectl get all `
+` $ kubectl get all -n exercises `
 
 5. Increase the ping/pong counter using url address 'http://locahost:8081/pingpong'
 6. Verify : Open the browser url 'http://localhost:8081/'.
