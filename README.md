@@ -24,10 +24,11 @@
  - [2.1](https://github.com/hozmaster/KubernetesSubmissions/tree/2.1/ch2210)
  - [2.2](https://github.com/hozmaster/KubernetesSubmissions/tree/2.2/ch3220)
  - [2.3](https://github.com/hozmaster/KubernetesSubmissions/tree/2.3/ch2210)
+ - [2.4](https://github.com/hozmaster/KubernetesSubmissions/tree/2.4/ch3220)
 
 
 ~~~ Folders :
- - \ch3220             - Exercise 2.2 
+ - \ch3220             - Exercise 2.2, 2.4
  - \ch2210             - Exercise 2.1, 2.3
  - \ch2112             - Exercise 1.12 & exercise 1.13 
  - \app2               - Exercise 1.11 

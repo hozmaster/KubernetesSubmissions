@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cutlass-deployment
+  namespace: project
   labels:
     app: cutlass-app
 spec:
