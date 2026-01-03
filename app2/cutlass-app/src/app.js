@@ -5,8 +5,6 @@ const {generateUUIDHash} = require("./library/hashgenerator");
 const app = express();
 const appIdentifier = generateUUIDHash();
 
-
-
 app.get('/', (req, res) => {
 
     const d = new Date();

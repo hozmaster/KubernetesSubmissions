@@ -15,10 +15,26 @@ spec:
     spec:
       containers:
         - name: scimitar-app
-          image: matsubokkuri/scimitar-app:2.1
+          image: matsubokkuri/scimitar-app:2.5
           imagePullPolicy: Always
+          env:
+            - name : MESSAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: exercise-config
+                  key: message
+          volumeMounts:
+            - mountPath: /config
+              name: information-volume
+              readOnly: true
         - name: scimitar-backend
           image: matsubokkuri/scimitar-backend:2.1
           imagePullPolicy: Always
+      volumes:
+        - name: information-volume
+          configMap:
+            name: exercise-config
+            items:
+              - key: information.txt
+                path: information.txt
       restartPolicy: Always
-      
