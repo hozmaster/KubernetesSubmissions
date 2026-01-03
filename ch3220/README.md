@@ -1,4 +1,4 @@
-# Exercise 2.2 Connection pods
+# Exercise 2.6 Configuring applications
 
 ## Folders
 
