@@ -22,13 +22,35 @@ spec:
             claimName: cutlass-pv-claim
       containers:
         - name: cutlass-app
-          image: matsubokkuri/cutlass-app:2.2
+          image: matsubokkuri/cutlass-app:2.6
           imagePullPolicy: Always
           volumeMounts: # Mount volume
             - name: shared-storage
               mountPath: /usr/src/app/files
+          env:
+            - name : TODO_URL_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: cutlass-config
+                  key: todo_url_address
+            - name : IPSUM_PIC_SP_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cutlass-config
+                  key: ipsum_pic_sp_url
+            - name : APP_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: cutlass-config
+                  key: app_port
         - name: cutlass-backend
-          image: matsubokkuri/cutlass-backend:2.2
+          image: matsubokkuri/cutlass-backend:2.6
+          env:
+            - name : BACKEND_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: cutlass-config
+                  key: backend_port
           imagePullPolicy: Always
       restartPolicy: Always
       

@@ -6,6 +6,7 @@ const applicationPath = '/usr/src/app';
 const theImageFile = path.join(applicationPath, '/files/image.jpg');
 const tenMinutesInMs = 10 * 60 * 1000;
 
+const ipsum_service = process.env.IPSUM_PIC_SP_URL;
 const isImageOldEnough  = () => {
     let isTooOld = false;
     try {
@@ -21,7 +22,7 @@ const isImageOldEnough  = () => {
 }
 
 const fetchImageFile = async () => {
-    const response = await get('https://picsum.photos/200/300', {responseType: 'stream'})
+    const response = await get(ipsum_service + '/200/300', {responseType: 'stream'})
     response.data.pipe(fs.createWriteStream(theImageFile));
 }
 

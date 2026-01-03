@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cutlass-config
+  namespace: project
+data:
+  app_port: "3000"
+  backend_port: "3010"
+  ipsum_pic_sp_url: http://picsum.photos
+  todo_url_address: http://cutlass-backend-svc:2346

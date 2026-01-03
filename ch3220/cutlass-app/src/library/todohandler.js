@@ -1,4 +1,5 @@
 const axios = require("axios");
+const service_url = process.env.TODO_URL_ADDRESS;
 
 const getAllTodos = async () => {
     const res = await axios({
@@ -6,8 +7,7 @@ const getAllTodos = async () => {
         headers: {
             'Content-Type': 'application/json',
         },
-        // url: 'http://cutlass-backend-svc:2346/todos',
-        url: 'http://localhost:3010/todos',
+        url: service_url + '/todos',
     }).catch(error => {
         console.log(error);
     });

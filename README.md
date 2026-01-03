@@ -26,9 +26,10 @@
  - [2.3](https://github.com/hozmaster/KubernetesSubmissions/tree/2.3/ch2210)
  - [2.4](https://github.com/hozmaster/KubernetesSubmissions/tree/2.4/ch3220)
  - [2.5](https://github.com/hozmaster/KubernetesSubmissions/tree/2.5/ch2210)
+ - [2.6](https://github.com/hozmaster/KubernetesSubmissions/tree/2.6/ch3220)
    
 ~~~ Folders :
- - \ch3220             - Exercise 2.2, 2.4
+ - \ch3220             - Exercise 2.2, 2.4, 2.6
  - \ch2210             - Exercise 2.1, 2.3, 2.5
  - \ch2112             - Exercise 1.12 & exercise 1.13 
  - \app2               - Exercise 1.11 
@@ -36,3 +37,4 @@
  - \the_project        - The 'log output'-application with Kubernetes files.
                          Check .\the_project\README.md for instructions.
 ~~~
+
