@@ -1,15 +1,20 @@
+const {gPool, getPingCounter} = require("../db/database");
 const router = require('express').Router();
 
-let pongCounter = 0;
+router.get('/pingpong', async (req, res) => {
 
-router.get('/pingpong', (req, res) => {
+    let pongCounter = await getPingCounter();
     pongCounter++;
+    const client = await gPool.connect();
+    const result = await client.query('UPDATE pingpong SET count = $1 where id = 1;', [pongCounter]);
+    await client.release(true);
     res.send(`Pong: ${pongCounter}\n`);
 });
 
-router.get('/pings', (req, res) => {
+router.get('/pings', async (req, res) => {
+    const counter = await getPingCounter();
     res.json(JSON.stringify({
-        'pings': pongCounter
+        'pings': counter
     }));
 });
 

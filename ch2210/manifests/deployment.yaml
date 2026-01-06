@@ -28,8 +28,14 @@ spec:
               name: information-volume
               readOnly: true
         - name: scimitar-backend
-          image: matsubokkuri/scimitar-backend:2.1
+          image: matsubokkuri/scimitar-backend:2.7
           imagePullPolicy: Always
+          env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: exercise-config
+                  key: db_host
       volumes:
         - name: information-volume
           configMap:
