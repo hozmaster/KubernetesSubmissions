@@ -1,4 +1,5 @@
-# Exercise 2.6 Configuring applications
+
+# Exercise 2.8 The project, step 11
 
 ## Folders
 
