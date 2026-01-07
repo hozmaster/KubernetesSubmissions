@@ -28,14 +28,18 @@
  - [2.5](https://github.com/hozmaster/KubernetesSubmissions/tree/2.5/ch2210)
  - [2.6](https://github.com/hozmaster/KubernetesSubmissions/tree/2.6/ch3220)
  - [2.7](https://github.com/hozmaster/KubernetesSubmissions/tree/2.7/ch2210)
-   
+ - [2.8](https://github.com/hozmaster/KubernetesSubmissions/tree/2.8/ch3220)
+
 ~~~ Folders :
- - \ch3220             - Exercise 2.2, 2.4, 2.6
- - \ch2210             - Exercise 2.1, 2.3, 2.5, 2.7
- - \ch2112             - Exercise 1.12 & exercise 1.13 
- - \app2               - Exercise 1.11 
- - \app3               - Exercise 1.10  
- - \the_project        - The 'log output'-application with Kubernetes files.
-                         Check .\the_project\README.md for instructions.
+ - \ch3220                  - Exercise 2.2, 2.4, 2.6, 2.8
+ - \ch2210                  - Exercise 2.1, 2.3, 2.5, 2.7
+ - \ch2112                  - Exercise 1.12 & exercise 1.13 
+ - \app2                    - Exercise 1.11 
+ - \app3                    - Exercise 1.10  
+ - \logout                  - The initial 'log output'-application with Kubernetes files.
+                              Check .\the_project\README.md for instructions.
+ - \system                  - Yaml file for busybox and 
+ - \system\k3s-postgresql   - Yaml files for the postgres-stset
+                          
 ~~~
 

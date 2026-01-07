@@ -22,7 +22,7 @@ spec:
             claimName: cutlass-pv-claim
       containers:
         - name: cutlass-app
-          image: matsubokkuri/cutlass-app:2.6
+          image: matsubokkuri/cutlass-app:2.8
           imagePullPolicy: Always
           volumeMounts: # Mount volume
             - name: shared-storage
@@ -44,13 +44,33 @@ spec:
                   name: cutlass-config
                   key: app_port
         - name: cutlass-backend
-          image: matsubokkuri/cutlass-backend:2.6
+          image: matsubokkuri/cutlass-backend:2.8
           env:
             - name : BACKEND_PORT
               valueFrom:
                 configMapKeyRef:
                   name: cutlass-config
                   key: backend_port
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: cutlass-config
+                  key: db_host
+            - name: DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: cutlass-config
+                  key: db_username
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: cutlass-config
+                  key: db_name
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cutlass-secret
+                  key: db_password
           imagePullPolicy: Always
       restartPolicy: Always
       

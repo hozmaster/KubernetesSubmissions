@@ -3,11 +3,11 @@ const router = require('express').Router();
 const {insertTodo, getAllTodos} = require("../library/todo");
 
 router.post('/todos',  express.json(), async (req, res) => {
-    if (req.body) {
+    if (req.body && req.body.todo) {
         await insertTodo(req.body.todo);
         res.send(200);
     } else {
-        res.send(500);
+        res.send(400);
     }
 });
 

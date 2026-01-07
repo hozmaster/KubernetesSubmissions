@@ -20,7 +20,6 @@ app.get('/', async (req, res, next) => {
     next();
 });
 
-
 app.use('/', async (req, res, next) => {
     const tooOld = isImageOldEnough();
     if (tooOld) {
