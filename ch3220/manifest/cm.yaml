@@ -11,3 +11,5 @@ data:
   db_host: postgres-svc.default
   db_name: postgres
   db_username: admin
+  todo_url_host: cutlass-backend-svc
+  todo_url_port: "2346"
