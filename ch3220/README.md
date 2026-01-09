@@ -1,19 +1,22 @@
 
-# Exercise 2.8 The project, step 11
+# Exercise 2.9 The project, step 12 (cronjob)
 
 ## Folders
 
 - cutlass-app Web UI part.
 - cutlass-backend The API layer. Handles and stores todo's
+- cutlass-feeder : Go project to fetch a random wiki page and store it toto system 
 
 ### ENVIRONMENT variables for K8s and dev
 
-| ENV variable     | Recommend value                 | Description                              |
-|------------------|---------------------------------|------------------------------------------|
-| TODO_URL_ADDRESS | http://cutlass-backend-svc:2346 | Address of the backend service           |
-| IPSUM_PIC_SP_URL | https://picsum.photos           | Picsum service url                       |
-| APP_PORT         | 3000                            | Socket port which app service listen     |
-| BACKEND_PORT     | 3010                            | Socket port which backend service listen |
+| ENV variable      | Recommend value                 | Description                              |
+|-------------------|---------------------------------|------------------------------------------|
+| TODO_URL_ADDRESS  | http://cutlass-backend-svc:2346 | Address of the backend service           |
+| IPSUM_PIC_SP_URL  | https://picsum.photos           | Picsum service url                       |
+| APP_PORT          | 3000                            | Socket port which app service listen     |
+| BACKEND_PORT      | 3010                            | Socket port which backend service listen |     
+| TODO_BACKEND_HOST | cutlass-backend-svc             |                                          |
+| TODO_BACKEND_PORT | "2346"                          |                                          |
 
 ### Setup
 
@@ -31,6 +34,7 @@
     - ` $ kubectl apply -f manifest/ `
 7. Verify that the project is running
     - ` $ kubectl get all -n project `
+    - ` $ kubectl get cronjob -n project`
 
 ## Usage:
 
