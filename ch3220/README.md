@@ -1,10 +1,10 @@
 
-# Exercise 2.9 The project, step 12 (cronjob)
+# Exercise 2.10 The project, step 13 (monitoring)
 
 ## Folders
 
 - cutlass-app Web UI part.
-- cutlass-backend The API layer. Handles and stores todo's
+- cutlass-backend The API layer. Handles and stores todo's. Limit max todo length to 140 chars. 
 - cutlass-feeder : Go project to fetch a random wiki page and store it toto system 
 
 ### ENVIRONMENT variables for K8s and dev

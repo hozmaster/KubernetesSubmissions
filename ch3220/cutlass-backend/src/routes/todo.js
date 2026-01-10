@@ -4,10 +4,19 @@ const {insertTodo, getAllTodos} = require("../library/todo");
 
 router.post('/todos',  express.json(), async (req, res) => {
     if (req.body && req.body.todo) {
-        await insertTodo(req.body.todo);
-        res.send(200);
+        const todo = req.body.todo;
+        let statusCode = 200;
+        if (todo.length > 0 && todo.length < 141) {
+            await insertTodo(req.body.todo);
+            console.log("backend: Added.");
+        } else  {
+            console.log("backend: Too big or nothing sent as a action. Please try again.");
+            statusCode = 422;
+        }
+        res.status(statusCode).send({"status:": statusCode});
     } else {
-        res.send(400);
+        console.log("backend: Nothing entered to service. Quit.")
+        res.status(400).send({"status":"error"});
     }
 });
 

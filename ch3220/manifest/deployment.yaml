@@ -44,7 +44,7 @@ spec:
                   name: cutlass-config
                   key: app_port
         - name: cutlass-backend
-          image: matsubokkuri/cutlass-backend:2.8
+          image: matsubokkuri/cutlass-backend:2.10
           env:
             - name : BACKEND_PORT
               valueFrom:
