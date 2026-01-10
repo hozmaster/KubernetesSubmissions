@@ -27,7 +27,7 @@ FROM alpine:3.21 AS final
 COPY --from=builder /cutlass-go /bin/cutlass-go
 
 # Expose the application's port
-EXPOSE 8000
+#EXPOSE 8000
 
 # Run the application
-CMD ["bin/cutlass-go"]
+#CMD ["bin/cutlass-go"]
