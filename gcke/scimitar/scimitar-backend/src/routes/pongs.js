@@ -1,6 +1,10 @@
 const {gPool, getPingCounter} = require("../db/database");
 const router = require('express').Router();
 
+router.get ('/', async (req, res) => {
+    res.status(200).send(``);
+});
+
 router.get('/pingpong', async (req, res) => {
 
     let pongCounter = await getPingCounter();

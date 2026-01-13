@@ -8,12 +8,13 @@ const DB_PASSWORD = process.env.DB_PASSWORD || 'admin';
 const gPool = new Pool({
     host: DB_HOST,
     user: DB_USER,
-//    password: DB_PASSWORD,
+    password: DB_PASSWORD,
     database: DB_NAME,
     port: 5432,
 })
 
 const setupDatabase = async () => {
+    console.log(DB_HOST);
     const client = await gPool.connect();
     const res = await gPool.query(`SELECT datname
                                   FROM pg_catalog.pg_database
