@@ -4,8 +4,9 @@
 
 ## Folders
 
-   - postgresql-stset   K8s files for postgres
-   - scimitar           Pingpong application   
+   - postgresql-stset   Postgres setup
+   - scimitar           Pingpong application
+   - cutlass            The project 
 
 ## Prerequisites
    - Google Cloud account
@@ -14,20 +15,17 @@
 
 ## Setup
 
-   1.  Create a cluster:
+   1.  Create a cluster to GCKE:
     
 ```
    $ gcloud container clusters delete dwk-cluster --zone=europe-north1-b
    $ gcloud container clusters update dwk-cluster --location=europe-north1-b --gateway-api=standard
 ```
-
-   2. Create stateful postgresql instance
  
 ### Setup 
 
 ```
    $ cd gcke
-   $ kubectl apply -f manifests/gateway.yaml
    $ kubectl apply -f postgresql-stset/   
 ```
 
@@ -52,30 +50,22 @@
  
 ```
    $ kubectl get all -n exercises
-.
-.      
-NAME                           TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)          AGE
-service/scimitar-app-svc       LoadBalancer   34.118.XXX.XX   34.88.XX.XX     2345:30508/TCP   2m37s
-service/scimitar-backend-svc   LoadBalancer   34.118.XXX.XX   34.88.XX.XX     2346:30282/TCP   2m37s
-.
-.    
 ```
 
    - Get ip address of the application inside of gcke: 
 
 ```
-   kubectl get ing -n exercises
+   kubectl get gateway -n exercises
 .
 .   
-NAME               CLASS    HOSTS   ADDRESS         PORTS   AGE
-scimitar-ingress   <none>   *       34.120.XXX.XX   80      88m
-.
+NAME               CLASS                            ADDRESS           PROGRAMMED   AGE
+scimitar-gateway   gke-l7-global-external-managed   136.XXX.XXX.XXX   True         40m.
 .   
 ```
 
-   - Open the browser url 'http://34.120.XX.XX/'.
-   - Increase the ping/pong counter using url address 'http://34.120.XX.XXpingpong'
-   - Get the ping counter : 'http://34.120.XX.XX/pings'
+   - Open the browser url 'http://136.XXX.XXX.XXX/'.
+   - Increase the ping/pong counter using url address 'http://136.XXX.XXX.XXXX/pingpong'
+   - Get the ping counter : 'http://136.XXX.XXX.XXX/pings'
 
 ### 4.2 Verify cutlass:
 
@@ -84,26 +74,18 @@ scimitar-ingress   <none>   *       34.120.XXX.XX   80      88m
 
 ```
    $ kubectl get all -n project
-.
-.      
-NAME                           TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)          AGE
-service/scimitar-app-svc       LoadBalancer   34.118.XXX.XX   34.88.XX.XX     2345:30508/TCP   2m37s
-service/scimitar-backend-svc   LoadBalancer   34.118.XXX.XX   34.88.XX.XX     2346:30282/TCP   2m37s
-.
-.    
 ```
 
 - Get ip address of the application inside of gcke:
 
 ```
-   kubectl get ing -n project
+   kubectl get gatway -n project
 .
 .   
-NAME               CLASS    HOSTS   ADDRESS         PORTS   AGE
-scimitar-ingress   <none>   *       34.111.XXX.XX   80      88m
-.
+NAME              CLASS                            ADDRESS          PROGRAMMED   AGE
+cutlass-gateway   gke-l7-global-external-managed   34.149.XXX.XXX   True         12m.
 .   
 ```
 
-- Open the browser url 'http://34.111.XX.XX/'.
-- Get todos : 'http://34.111.XX.XX/todos'
+- Open the browser url 'http://34.149.XX.XX/'.
+- Get todos : 'http://34.149.XX.XX/todos'
