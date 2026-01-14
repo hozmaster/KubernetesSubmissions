@@ -17,15 +17,15 @@ app.get('/', async (req, res, next) => {
         base64Image = null;
     }
     res.render('home', {ipsumImage: base64Image, todos: todos})
-    // next();
+    next();
 });
 
-// app.use('/', async (req, res, next) => {
-//     const tooOld = isImageOldEnough();
-//     if (tooOld) {
-//         await fetchImageFile();
-//     }
-//     next();
-// });
+app.use('/', async (req, res, next) => {
+    const tooOld = isImageOldEnough();
+    if (tooOld) {
+        await fetchImageFile();
+    }
+    next();
+});
 
 module.exports = app;
