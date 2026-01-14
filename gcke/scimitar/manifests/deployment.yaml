@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: scimitar-deployment
+  name: scimitar-frontend
   namespace: exercises
 spec:
   replicas: 1
@@ -12,21 +12,44 @@ spec:
     metadata:
       labels:
         app: scimitar-app
+        tier: frontend
     spec:
+      volumes:
+        - name: shared-storage
+          persistentVolumeClaim:
+            claimName: scimitar-pvc
       containers:
         - name: scimitar-app
           image: matsubokkuri/scimitar-app:4.2
           imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: shared-storage
+              mountPath: /config
           env:
             - name : MESSAGE
               valueFrom:
                 configMapKeyRef:
                   name: exercise-config
                   key: message
-          volumeMounts:
-            - mountPath: /config
-              name: information-volume
-              readOnly: true
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scimitar-backend
+  namespace: exercises
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scimitar-backend
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: scimitar-backend
+        tier: backend
+    spec:
+      containers:
         - name: scimitar-backend
           image: matsubokkuri/scimitar-backend:4.2
           imagePullPolicy: IfNotPresent
