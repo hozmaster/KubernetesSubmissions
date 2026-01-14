@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: cutlass-pv-claim
+  name: cutlass-pvc
   namespace: project
 spec:
   storageClassName: "standard-rwo"

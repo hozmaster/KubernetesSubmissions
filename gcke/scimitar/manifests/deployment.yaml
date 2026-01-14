@@ -14,23 +14,27 @@ spec:
         app: scimitar-app
         tier: frontend
     spec:
-      volumes:
-        - name: shared-storage
-          persistentVolumeClaim:
-            claimName: scimitar-pvc
       containers:
         - name: scimitar-app
           image: matsubokkuri/scimitar-app:4.2
           imagePullPolicy: IfNotPresent
           volumeMounts:
-            - name: shared-storage
+            - name: information-volume
               mountPath: /config
+              readOnly: true
           env:
             - name : MESSAGE
               valueFrom:
                 configMapKeyRef:
                   name: exercise-config
                   key: message
+      volumes:
+        - name: information-volume
+          configMap:
+            name: exercise-config
+            items:
+              - key: information.txt
+                path: information.txt
 ---
 apiVersion: apps/v1
 kind: Deployment

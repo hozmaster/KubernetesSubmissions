@@ -22,10 +22,10 @@ spec:
       volumes:
         - name: shared-storage
           persistentVolumeClaim:
-            claimName: cutlass-pv-claim
+            claimName: cutlass-pvc
       containers:
         - name: cutlass-app
-          image: matsubokkuri/cutlass-app:3.2B
+          image: matsubokkuri/cutlass-app:3.3
           imagePullPolicy: IfNotPresent
           volumeMounts: # Mount volume
             - name: shared-storage
