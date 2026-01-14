@@ -22,7 +22,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: scimitar-app
+    app: scimitar-backend
     tier: backend
   ports:
     - name: scimitar-backend
