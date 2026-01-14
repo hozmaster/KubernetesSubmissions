@@ -35,10 +35,11 @@
 ### Chapter 4
  - [3.1](https://github.com/hozmaster/KubernetesSubmissions/tree/3.1/gcke)
  - [3.2](https://github.com/hozmaster/KubernetesSubmissions/tree/3.2/gcke)
+ - [3.3](https://github.com/hozmaster/KubernetesSubmissions/tree/3.3/gcke)
 
 
 ~~~ Folders :
- - \gcke                    - Exercise 3.1 - 3.2
+ - \gcke                    - Exercises 3.1-3.3
  - \ch3220                  - Exercise 2.2, 2.4, 2.6, 2.8, 2.9, 2.10
  - \ch2210                  - Exercise 2.1, 2.3, 2.5, 2.7
  - \ch2112                  - Exercise 1.12 & exercise 1.13 
