@@ -1,4 +1,6 @@
-# Exercise 4.1 GCKE exercises
+# Chapter 4. GCKE exercises
+
+## 3.3. To the Gateway
 
 ## Folders
 
@@ -8,25 +10,28 @@
 ## Prerequisites
    - Google Cloud account
    - Google SDK install and running in your local PC
-   - Google project created. 
+   - Google project created.
 
 ## Setup
 
    1.  Create a cluster:
     
 ```
-   gcloud container clusters delete dwk-cluster --zone=europe-north1-b
+   $ gcloud container clusters delete dwk-cluster --zone=europe-north1-b
+   $ gcloud container clusters update dwk-cluster --location=europe-north1-b --gateway-api=standard
 ```
-   Wait until it finished
 
    2. Create stateful postgresql instance
  
-### Deploy applications
+### Setup 
 
 ```
    $ cd gcke
+   $ kubectl apply -f manifests/gateway.yaml
    $ kubectl apply -f postgresql-stset/   
 ```
+
+### Deploying
 
    3.1  Deploy the pingpong-project (scimitar)
 

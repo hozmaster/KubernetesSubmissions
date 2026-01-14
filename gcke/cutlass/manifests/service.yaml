@@ -4,7 +4,7 @@ metadata:
   name: cutlass-app-svc
   namespace: project
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: cutlass-app
     tier: frontend
@@ -20,7 +20,7 @@ metadata:
   name: cutlass-backend-svc
   namespace: project
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: cutlass-app
     tier: backend
