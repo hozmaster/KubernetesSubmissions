@@ -25,7 +25,7 @@ spec:
             claimName: cutlass-pvc
       containers:
         - name: cutlass-app
-          image: matsubokkuri/cutlass-app:3.3
+          image: CUTLASS_APP_IMAGE
           imagePullPolicy: IfNotPresent
           volumeMounts: # Mount volume
             - name: shared-storage
@@ -65,7 +65,7 @@ spec:
     spec:
       containers:
         - name: cutlass-backend
-          image: matsubokkuri/cutlass-backend:3.2
+          image: CUTLASS_BACKEND_IMAGE
           env:
             - name: BACKEND_PORT
               valueFrom:

@@ -1,11 +1,12 @@
 # Chapter 4. GCKE exercises
 
-## 3.4. Rewritten routing
+## 3.5. The project, step 14
+
+-  Target: Configure the project (cutlass) to use Kustomize
 
 ## Folders
 
    - postgresql-stset   Postgres setup
-   - scimitar           Pingpong application
    - cutlass            The project 
 
 ## Prerequisites
@@ -31,46 +32,17 @@
 
 ### Deploying
 
-   3.1  Deploy the pingpong-project (scimitar)
-
-```
-   $ cd scimitar
-   $ kubectl apply -f manifests/
-```
-   3.2  Deploy the todo-project (cutlass)
+   3.1  Deploy the todo-project (cutlass)
 
 ```
    $ cd cutlass
-   $ kubectl apply -f manifest/
+   $ kubectl apply -k .
 ```
 
-### 4. Verify scimitar:
- 
-   - Check the deployment:
- 
-```
-   $ kubectl get all -n exercises
-```
-
-   - Get ip address of the application inside of gcke: 
-
-```
-   kubectl get gateway -n exercises
-.
-.   
-NAME               CLASS                            ADDRESS           PROGRAMMED   AGE
-scimitar-gateway   gke-l7-global-external-managed   136.XXX.XXX.XXX   True         40m.
-.   
-```
-
-   - Open the browser url 'http://136.XXX.XXX.XXX/'.
-   - Increase the ping/pong counter using url address 'http://136.XXX.XXX.XXXX/pingpong'  --> Redirects now to '/' 
-   - Get the ping counter : 'http://136.XXX.XXX.XXX/pings'
-
-### 4.2 Verify cutlass:
+### 4.2 Verify results
 
 
-- Check the deployment:
+- Wait a while and check the deployment:
 
 ```
    $ kubectl get all -n project
