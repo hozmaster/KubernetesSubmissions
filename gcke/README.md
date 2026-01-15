@@ -1,6 +1,6 @@
 # Chapter 4. GCKE exercises
 
-## 3.3. To the Gateway
+## 3.4. Rewritten routing
 
 ## Folders
 
@@ -64,7 +64,7 @@ scimitar-gateway   gke-l7-global-external-managed   136.XXX.XXX.XXX   True      
 ```
 
    - Open the browser url 'http://136.XXX.XXX.XXX/'.
-   - Increase the ping/pong counter using url address 'http://136.XXX.XXX.XXXX/pingpong'
+   - Increase the ping/pong counter using url address 'http://136.XXX.XXX.XXXX/pingpong'  --> Redirects now to '/' 
    - Get the ping counter : 'http://136.XXX.XXX.XXX/pings'
 
 ### 4.2 Verify cutlass:
