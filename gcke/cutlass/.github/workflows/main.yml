@@ -1,24 +1,16 @@
 name: Release application
 on:
   push:
-<<<<<<< Updated upstream
-=======
     branches:
       - main
->>>>>>> Stashed changes
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: dwk-cluster
   GKE_ZONE: europe-north1-b
   REGISTRY: europe-north1-docker.pkg.dev
   REPOSITORY: cutlass-dwke
-<<<<<<< Updated upstream
-  IMAGE: dwk-environments
-  SERVICE: dwk-environments
-=======
   IMAGE: cutlass-feeder
   SERVICE: cutlass-feeder
->>>>>>> Stashed changes
   BRANCH: ${{ github.ref_name }}
 jobs:
   build-publish-deploy:
@@ -34,8 +26,6 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
       - name: 'Use gcloud CLI'
         run: gcloud info
-<<<<<<< Updated upstream
-=======
       - name: 'Authorize login'
         run: gcloud --quiet auth configure-docker europe-north1-docker.pkg.dev
       - name: 'Get GKE credentials'
