@@ -1,62 +1,42 @@
-# Chapter 4. GCKE exercises
 
-## 3.5. The project, step 14
+# Exercise 3.6 The project, step 15 (GCKE & Github actions)
 
--  Target: Configure the project (cutlass) to use Kustomize
+Task: Setup automatic deployment for the project as well (Github actions to GCKE)
+
+* Source repository : [dwk-cutlass](https://github.com/hozmaster/dwk-cutlass)
+* TAG : 3.6
 
 ## Folders
 
-   - postgresql-stset   Postgres setup
-   - cutlass            The project 
+- cutlass-app Web UI part.
+- cutlass-backend The API layer. Handles and stores todo's. Limit max todo length to 140 chars.
+- cutlass-feeder : Go project to fetch a random wiki page and store it toto system
 
-## Prerequisites
-   - Google Cloud account
-   - Google SDK install and running in your local PC
-   - Google project created.
+### ENVIRONMENT variables for K8s and dev
 
-## Setup
+| ENV variable      | Recommend value                  | Description                              |
+|-------------------|----------------------------------|------------------------------------------|
+| TODO_URL_ADDRESS  | http://cutlass-backend-svc:80    | Address of the backend service           |
+| IPSUM_PIC_SP_URL  | https://picsum.photos            | Picsum service url                       |
+| APP_PORT          | 3000                             | Socket port which app service listen     |
+| BACKEND_PORT      | 3010                             | Socket port which backend service listen |     
+| TODO_BACKEND_HOST | cutlass-backend-svc              |                                          |
+| TODO_BACKEND_PORT | "80"                             |                                          |
 
-   1.  Create a cluster to GCKE (with Gateway):
-    
-```
-   $ gcloud container clusters create dwk-cluster --location=europe-north1-b --gateway-api=standard
-```
- 
-### Setup 
+### Setup
 
-```
-   $ cd gcke
-   $ kubectl apply -f postgresql-stset/   
-```
+- Setup GCKE cluster with Gateway API. Setup artifact repositories to subprojects
+- Set action secrets for : GKE_SA_KEY and GKE_PROJECT-keys.
+-
+- See KubernetesSubmissions/gcke/README.md for more details.
 
-### Deploying
+### Verification
 
-   3.1  Deploy the todo-project (cutlass)
-
-```
-   $ cd cutlass
-   $ kubectl apply -k .
-```
-
-### 4.2 Verify results
+Get Gateway ip address (`kubectl get gateway -n project`) and enter it to browser.
 
 
-- Wait a while and check the deployment:
+### Curl
+* Get all todo's : 'curl -X GET http://<ip_address>/todos'
+* Add new todo to the system :
 
-```
-   $ kubectl get all -n project
-```
-
-- Get ip address of the application inside of gcke:
-
-```
-   kubectl get gatway -n project
-.
-.   
-NAME              CLASS                            ADDRESS          PROGRAMMED   AGE
-cutlass-gateway   gke-l7-global-external-managed   34.149.XXX.XXX   True         12m.
-.   
-```
-
-- Open the browser url 'http://34.149.XX.XX/'.
-- Get todos : 'http://34.149.XX.XX/todos'
+  ` curl -X POST -H 'Content-type: application/json' -d '{"todo":"Learn JavaScript"}' http://<ip_address>/todos'  `
