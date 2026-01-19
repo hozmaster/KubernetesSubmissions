@@ -38,7 +38,7 @@
  - [3.3](https://github.com/hozmaster/KubernetesSubmissions/tree/3.3/gcke)
  - [3.4](https://github.com/hozmaster/KubernetesSubmissions/tree/3.4/gcke)
  - [3.5](https://github.com/hozmaster/KubernetesSubmissions/tree/3.5/gcke)
- - [3.6](https://github.com/hozmaster/KubernetesSubmissions/tree/3.6)
+ - [3.6](https://github.com/hozmaster/KubernetesSubmissions/tree/3.6/gcke)
 
 
 ### External repositories
