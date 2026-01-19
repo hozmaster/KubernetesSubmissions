@@ -16,11 +16,10 @@
 
 ## Setup
 
-   1.  Create a cluster to GCKE:
+   1.  Create a cluster to GCKE (with Gateway):
     
 ```
-   $ gcloud container clusters delete dwk-cluster --zone=europe-north1-b
-   $ gcloud container clusters update dwk-cluster --location=europe-north1-b --gateway-api=standard
+   $ gcloud container clusters create dwk-cluster --location=europe-north1-b --gateway-api=standard
 ```
  
 ### Setup 
