@@ -21,7 +21,7 @@
 
 ### Chapter 3
 
- - [2.1](https://github.com/hozmaster/KubernetesSubmissions/tree/2.1/ch2210)<
+ - [2.1](https://github.com/hozmaster/KubernetesSubmissions/tree/2.1/ch2210)
  - [2.2](https://github.com/hozmaster/KubernetesSubmissions/tree/2.2/ch3220)
  - [2.3](https://github.com/hozmaster/KubernetesSubmissions/tree/2.3/ch2210)
  - [2.4](https://github.com/hozmaster/KubernetesSubmissions/tree/2.4/ch3220)
@@ -38,7 +38,7 @@
  - [3.3](https://github.com/hozmaster/KubernetesSubmissions/tree/3.3/gcke)
  - [3.4](https://github.com/hozmaster/KubernetesSubmissions/tree/3.4/gcke)
  - [3.5](https://github.com/hozmaster/KubernetesSubmissions/tree/3.5/gcke)
- - [3.6](https://github.com/hozmaster/dwk-cutlass/releases/tag/3.6)
+ - [3.6](https://github.com/hozmaster/KubernetesSubmissions/tree/3.6)
 
 
 ### External repositories
