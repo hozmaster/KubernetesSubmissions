@@ -39,11 +39,13 @@
  - [3.4](https://github.com/hozmaster/KubernetesSubmissions/tree/3.4/gcke)
  - [3.5](https://github.com/hozmaster/KubernetesSubmissions/tree/3.5/gcke)
  - [3.6](https://github.com/hozmaster/KubernetesSubmissions/tree/3.6/gcke)
+ - [3.7](https://github.com/hozmaster/dwk-cutlass/releases/tag/3.7)
+ - [3.8](https://github.com/hozmaster/dwk-cutlass/releases/tag/3.8)
 
 
 ### External repositories
 
-- [dkw-cutlass](https://github.com/hozmaster/dwk-cutlass)              - Exercises 3.6 -
+- [dkw-cutlass](https://github.com/hozmaster/dwk-cutlass)              - Exercises 3.6 - 3.8
 
 ~~~ Folders :
  - \gcke                    - Exercises 3.1-3.5

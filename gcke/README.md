@@ -1,10 +1,10 @@
 
-# Exercise 3.6 The project, step 15 (GCKE & Github actions)
+# Exercise 3.7 The project, step 16 (GCKE & Github actions)
 
 Task: Setup automatic deployment for the project as well (Github actions to GCKE)
 
 * Source repository : [dwk-cutlass](https://github.com/hozmaster/dwk-cutlass)
-* TAG : 3.6
+* TAG : 3.7
 
 ## Folders
 
