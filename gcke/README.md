@@ -1,7 +1,30 @@
 
-# Exercise 3.7 The project, step 16 (GCKE & Github actions)
+# Exercise 3.8 The project, step 16 (GCKE & Github actions)
 
-Task: Setup automatic deployment for the project as well (Github actions to GCKE)
+Task: Do a pros/cons comparison of the solutions in terms of meaningful differences. This includes at least 
+
+DBaaS
+Low: Create via console, gcloud, or Terraform in minutes. Google handles provisioning, high availability setup (regional/multi-zone), networking, and basic config.
+
+DIY
+
+High: Deploy StatefulSet, PersistentVolumeClaims using storage, configure replication/failover set up secrets, networking (Services, Ingress), and monitoring. Requires Kubernetes expertise.
+
+Maintenance
+
+DBaaS: Low. Palveluntarjoaja kuten tässä tapauksessa Google huolehtii palvelun ylläpidosta ja päivityksienm huolehtimisesta.
+
+DIY:
+Google automates patching, minor/major version upgrades, vacuuming (AlloyDB uses ML), scaling (vertical + read replicas), monitoring, and failure recovery. Operators can focus mainly on app logic.
+
+Backups:
+
+DBaaS:
+Fully automated & easy: automated daily backups, on-dem
+and backups, export to service providers storage. Built-in, no extra setup. Recovery is point-and-click or API-driven.
+
+DIY:
+Manual or scripted: Use tools like pg_dump, volume snapshots, or operator-specific backups. Requires configuring schedules, storage destinations (e.g., Cloud Storage buckets), testing restores, and handling consistency. More flexible but error-prone.
 
 * Source repository : [dwk-cutlass](https://github.com/hozmaster/dwk-cutlass)
 * TAG : 3.7
