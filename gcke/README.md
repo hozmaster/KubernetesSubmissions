@@ -1,5 +1,5 @@
 
-# Exercise 3.8 The project, step 16 (GCKE & Github actions)
+# Exercise 3.9 DBaaS vs DIY
 
 Task: Do a pros/cons comparison of the solutions in terms of meaningful differences. This includes at least 
 

@@ -41,6 +41,7 @@
  - [3.6](https://github.com/hozmaster/KubernetesSubmissions/tree/3.6/gcke)
  - [3.7](https://github.com/hozmaster/dwk-cutlass/releases/tag/3.7)
  - [3.8](https://github.com/hozmaster/dwk-cutlass/releases/tag/3.8)
+ - [3.9](https://github.com/hozmaster/dwk-cutlass/releases/tag/3.9)
 
 
 ### External repositories
