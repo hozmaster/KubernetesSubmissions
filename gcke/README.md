@@ -3,6 +3,10 @@
 
 Task: Do a pros/cons comparison of the solutions in terms of meaningful differences. This includes at least 
 
+## Response 
+
+Required work and costs to initialize
+
 DBaaS
 Low: Create via console, gcloud, or Terraform in minutes. Google handles provisioning, high availability setup (regional/multi-zone), networking, and basic config.
 
@@ -10,21 +14,25 @@ DIY
 
 High: Deploy StatefulSet, PersistentVolumeClaims using storage, configure replication/failover set up secrets, networking (Services, Ingress), and monitoring. Requires Kubernetes expertise.
 
-Maintenance
+Maintenance 
 
-DBaaS: Low. Palveluntarjoaja kuten tässä tapauksessa Google huolehtii palvelun ylläpidosta ja päivityksienm huolehtimisesta.
-
-DIY:
+DBasS:
 Google automates patching, minor/major version upgrades, vacuuming (AlloyDB uses ML), scaling (vertical + read replicas), monitoring, and failure recovery. Operators can focus mainly on app logic.
+
+DIY
+
+Handle patching/OS updates, version upgrades (potentially disruptive), tuning parameters, vacuuming, replication health, failover testing, resource scaling, and dealing with Kubernetes-specific issues (e.g., Pod evictions, storage re-attachment). Requires ongoing DevOps/DBA time.
 
 Backups:
 
 DBaaS:
 Fully automated & easy: automated daily backups, on-dem
-and backups, export to service providers storage. Built-in, no extra setup. Recovery is point-and-click or API-driven.
+and backups, export to service providers' storage. Built-in, no extra setup. Recovery is point-and-click or API-driven.
 
 DIY:
 Manual or scripted: Use tools like pg_dump, volume snapshots, or operator-specific backups. Requires configuring schedules, storage destinations (e.g., Cloud Storage buckets), testing restores, and handling consistency. More flexible but error-prone.
+
+## Setup 
 
 * Source repository : [dwk-cutlass](https://github.com/hozmaster/dwk-cutlass)
 * TAG : 3.7
